@@ -1,9 +1,12 @@
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="niryo_ned">
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="niryo_ned">
     <!-- Import Properties -->
     <xacro:include filename="$(find niryo_robot_description)/urdf/ned/niryo_ned_param.urdf.xacro"/>
 
     <!-- Links -->
-
+<!--
     <link name="world"/>
 
     <joint name="joint_world" type="fixed">
@@ -11,7 +14,7 @@
         <child link="base_link"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
-
+-->
     <link name="base_link">
         <inertial>
             <origin xyz="-0.00240796011216664 -0.00591764669105095 0.0515774030380053"
@@ -281,5 +284,6 @@
 
     <link name="tool_link">
     </link>
+  </xacro:macro>
 
 </robot>
