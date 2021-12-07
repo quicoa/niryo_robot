@@ -1,5 +1,4 @@
-<!-- Launches move groups-->
-
+<?xml version="1.0"?>
 <launch>
     <arg name="hardware_version" value="ned"/>
 
@@ -25,9 +24,6 @@
         <!-- Allows joints to be outside of min and max values when starting -->
         <param name="start_state_max_bounds_error" value="0.1"/>
     </group>
-
-	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_niryo_ned_moveit)/config/config.rviz"/>
-
 
 </launch>
 
