@@ -11,9 +11,7 @@
     <env name="ROSCONSOLE_CONFIG_FILE" value="$(find niryo_robot_arm_commander)/config/rosconsole.config"/>
 
     <!-- Moveit move_group -->
-    <group if="$(eval hardware_version == 'ned')">
-        <include file="$(find my_niryo_ned_moveit_config)/launch/move_group.launch"/>
-    </group>
+    <include file="$(find my_niryo_ned_moveit_config)/launch/move_group.launch"/>
     <!-- Moveit move_group params -->
     <group ns="move_group">
         <!-- Disable Moveit! controller timeout -->
