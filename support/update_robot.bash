@@ -1,5 +1,7 @@
 #!/bin/bash
 
+nog effe updaten
+
 cd $HOME/niryo_robot_ws/src
 echo "Uploading files to robot..."
 sshpass -p robotics scp -r my_niryo_robot niryo@niryo_pi4:/home/niryo/catkin_ws/src
