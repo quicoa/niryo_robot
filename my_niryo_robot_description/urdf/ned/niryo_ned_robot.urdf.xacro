@@ -21,9 +21,6 @@
   <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned/niryo_ned.urdf.xacro"/>
   <xacro:niryo_ned/>
 
-  <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned/niryo_ned_gripper.urdf.xacro"/>
-  <xacro:niryo_ned_gripper/>
-
   <material name="LightGrey">
       <color rgba="0.7 0.7 0.7 1.0" />
   </material>
@@ -86,6 +83,11 @@
   </joint>
 
     <!-- Joint from tool_link to base_gripper -->
+  <!--
+
+  <xacro:include filename="$(find my_niryo_robot_description)/urdf/ned/niryo_ned_gripper.urdf.xacro"/>
+  <xacro:niryo_ned_gripper/>
+
     <joint name="joint_to_gripper" type="fixed">
         <parent link="tool_link"/>
         <child link="base_gripper_1"/>
@@ -93,4 +95,5 @@
                 xyz="0 0 0.005"
                 rpy="0 ${pi/2} ${pi/2}"/>
     </joint>
+  -->
 </robot>
