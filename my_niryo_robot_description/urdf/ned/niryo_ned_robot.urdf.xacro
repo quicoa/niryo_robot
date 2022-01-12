@@ -69,17 +69,17 @@
   </link>
 
   <joint name="baseplate_joint" type="fixed">
-    <origin xyz="0 0 0" />
+    <origin xyz="0.20 0 0" rpy="0.0 0.0 ${pi/2}"/>
     <parent link="world" />
     <child link="baseplate_link" />
   </joint>
-
+world
 
   <!-- robot to baseplate_joint. -->
   <joint name="mountingplate_link" type="fixed">
-    <parent link="baseplate_link" />
+    <parent link="world" />
     <child link="base_link" />
-    <origin xyz="0.0 -0.20 0.021" rpy="0.0 0.0 ${pi/2}"/>
+    <origin xyz="0.0 0.0 0.021" rpy="0.0 0.0 0"/>
   </joint>
 
     <!-- Joint from tool_link to base_gripper -->

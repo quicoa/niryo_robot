@@ -5,8 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /Axes1
       Splitter Ratio: 0.7425600290298462
-    Tree Height: 392
+    Tree Height: 389
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -77,11 +78,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          base_gripper_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           base_link:
             Alpha: 1
             Show Axes: false
@@ -108,21 +104,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           joint5_motor:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          mors_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          mors_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          mountingplate_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -195,11 +176,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          base_gripper_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           base_link:
             Alpha: 1
             Show Axes: false
@@ -226,21 +202,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           joint5_motor:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          mors_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          mors_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          mountingplate_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -273,11 +234,7 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        TCP:
-          Value: true
         arm_link:
-          Value: false
-        base_gripper_1:
           Value: false
         base_link:
           Value: false
@@ -289,13 +246,9 @@ Visualization Manager:
           Value: false
         hand_link:
           Value: false
+        ik_testpoint:
+          Value: true
         joint5_motor:
-          Value: false
-        mors_1:
-          Value: false
-        mors_2:
-          Value: false
-        mountingplate_link:
           Value: false
         shoulder_link:
           Value: false
@@ -313,25 +266,27 @@ Visualization Manager:
       Tree:
         world:
           baseplate_link:
-            mountingplate_link:
-              base_link:
-                shoulder_link:
-                  arm_link:
-                    elbow_link:
-                      forearm_link:
-                        joint5_motor:
-                          {}
-                        wrist_link:
-                          hand_link:
-                            tool_link:
-                              TCP:
-                                {}
-                              base_gripper_1:
-                                mors_1:
-                                  {}
-                                mors_2:
-                                  {}
+            base_link:
+              shoulder_link:
+                arm_link:
+                  elbow_link:
+                    forearm_link:
+                      joint5_motor:
+                        {}
+                      wrist_link:
+                        hand_link:
+                          tool_link:
+                            {}
+          ik_testpoint:
+            {}
       Update Interval: 0
+      Value: true
+    - Class: rviz/Axes
+      Enabled: true
+      Length: 0.699999988079071
+      Name: Axes
+      Radius: 0.009999999776482582
+      Reference Frame: <Fixed Frame>
       Value: true
   Enabled: true
   Global Options:
@@ -349,7 +304,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 1.3915867805480957
+      Distance: 2.1896886825561523
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -364,15 +319,15 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8197973966598511
+      Pitch: 0.42479783296585083
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.9117665886878967
+      Yaw: 0.14677292108535767
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1025
+  Height: 1023
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -381,9 +336,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002a3000003a7fc0200000007fb000000100044006900730070006c006100790073010000003d00000219000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000025c000001880000017d00ffffff00000494000003a700000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a3000003a5fc0200000007fb000000100044006900730070006c006100790073010000003d00000216000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000259000001890000017d00ffffff00000492000003a500000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1853
+  Width: 1851
   X: 67
   Y: 27
