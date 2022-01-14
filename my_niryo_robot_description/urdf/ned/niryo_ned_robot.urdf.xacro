@@ -96,4 +96,12 @@ world
                 rpy="0 ${pi/2} ${pi/2}"/>
     </joint>
   -->
+
+  <!-- tool center point -->
+  <link name="tcp_link" />
+  <joint name="tool0_link" type="fixed">
+    <parent link="tool_link" />
+    <child link="tcp_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
 </robot>
