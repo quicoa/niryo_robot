@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PS3='Please enter your operating mode: '
-options=("With fysical Niryo Ned Robot(Hotspot mode)" "With fysical Niryo Ned Robot(Wifi mode)" "None")
+options=("With fysical Niryo Ned Robot(Hotspot mode)" "With fysical Niryo Ned Robot(Wifi mode)" "With fysical Niryo Ned Robot(Ethernet mode)" "None")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -16,6 +16,12 @@ do
             source $HOME/niryo_ned_support/environment/wifi_network.bash
             roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch
 	    break
+      ;;
+        "With fysical Niryo Ned Robot(Ethernet mode)")
+            echo "you chose With fysical Niryo Ned Robot(Ethernet mode)"
+            source $HOME/niryo_ned_support/environment/ethernet_network.bash
+            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch
+      break
             ;;
         "None")
             echo "you chose Without fysical Niryo Ned Robot"
