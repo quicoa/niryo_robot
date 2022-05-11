@@ -27,7 +27,11 @@
             args="joint_state_controller niryo_robot_follow_joint_trajectory_controller"/>
 
     <!-- Load URDF -->
+<!--
     <arg name="urdf_path" value="$(find my_niryo_robot_description)/urdf/$(arg hardware_version)/niryo_$(arg hardware_version).urdf.xacro"/>
+-->
+    <arg name="urdf_path" value="$(find my_niryo_robot_description)/urdf/ned/niryo_ned_robot.urdf.xacro"/>
+
     <param name="robot_description" command="$(find xacro)/xacro  --inorder $(arg urdf_path)"/>
 
     <!-- Launch Robot state publisher -->
