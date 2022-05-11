@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="hardware_version" value="ned"/>
+
+    <!-- Command validation params -->
+    <group ns="niryo_robot/robot_command_validation">
+        <rosparam file="$(find niryo_robot_arm_commander)/config/$(arg hardware_version)/robot_command_validation.yaml"/>
+    </group>
+
+    <!-- Override MoveIt default logging from INFO to WARn -->
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find niryo_robot_arm_commander)/config/rosconsole.config"/>
+
+    <!-- Moveit move_group -->
+    <include file="$(find my_niryo_ned_moveit_config)/launch/move_group.launch"/>
+    <!-- Moveit move_group params -->
+    <group ns="move_group">
+        <!-- Disable Moveit! controller timeout -->
+        <param name="trajectory_execution/execution_duration_monitoring" value="false"/>
+
+        <param name="trajectory_execution/allowed_start_tolerance" value="0.0"/>
+
+        <!-- Allows joints to be outside of min and max values when starting -->
+        <param name="start_state_max_bounds_error" value="0.1"/>
+    </group>
+
+</launch>
+
