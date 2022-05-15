@@ -7,20 +7,29 @@ do
     case $opt in
         "With fysical Niryo Ned Robot(Hotspot mode)")
             echo "you chose With fysical Niryo Ned Robot(Hotspot mode)"
+            cat $HOME/niryo_ned_support/environment/avans_banner.txt
+            source $HOME/catkin_ws/install/release/ned/setup.bash
             source $HOME/niryo_ned_support/environment/hotspot_network.bash
-            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch
+            source $HOME/niryo_robot_ws/devel/setup.bash
+            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch simulation_mode:=false
 	    break
             ;;
         "With fysical Niryo Ned Robot(Wifi mode)")
             echo "you chose With fysical Niryo Ned Robot(Wifi mode)"
+            cat $HOME/niryo_ned_support/environment/avans_banner.txt
+            source $HOME/catkin_ws/install/release/ned/setup.bash
             source $HOME/niryo_ned_support/environment/wifi_network.bash
-            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch
-	    break
-      ;;
+            source $HOME/niryo_robot_ws/devel/setup.bash
+            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch simulation_mode:=false
+            break
+            ;;
         "With fysical Niryo Ned Robot(Ethernet mode)")
             echo "you chose With fysical Niryo Ned Robot(Ethernet mode)"
+            cat $HOME/niryo_ned_support/environment/avans_banner.txt
+            source $HOME/catkin_ws/install/release/ned/setup.bash
             source $HOME/niryo_ned_support/environment/ethernet_network.bash
-            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch
+            source $HOME/niryo_robot_ws/devel/setup.bash
+            roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch simulation_mode:=false
       break
             ;;
         "None")

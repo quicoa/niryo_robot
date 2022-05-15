@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <launch xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://gist.githubusercontent.com/nalt/dfa2abc9d2e3ae4feb82ca5608090387/raw/roslaunch.xsd">
-    
-    <!-- set to true if you want to launch ROS on your computer 
+
+    <!-- set to true if you want to launch ROS on your computer
         - controller will just echo position command
         - all hardware relative stuff is deactivated            -->
     <arg name="gazebo" default="false"/>
@@ -14,7 +14,7 @@
 
     <!-- Load controller settings -->
     <group unless="$(arg gazebo)">
-        <rosparam file="$(find niryo_moveit_config_standalone)/config/ros_controllers.yaml" command="load"/>
+        <rosparam file="$(find my_niryo_ned_moveit_config)/config/ros_controllers.yaml" command="load"/>
 
         <!-- spawn controllers -->
         <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="log"
@@ -31,5 +31,5 @@
 
     <!-- robot state publisher -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
-    
+
 </launch>
