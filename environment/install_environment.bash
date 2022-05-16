@@ -4,9 +4,9 @@ echo "Installing Environment"
 cd $HOME/niryo_robot_ws/src
 
 sshpass -p robotics ssh niryo@$ROS_CONTROLLER_IP "mkdir -p /home/niryo/niryo_ned_support/environment"
-sshpass -p robotics scp -r my_niryo_robot/environment niryo@$ROS_MASTER:/home/niryo/niryo_ned_support
+sshpass -p robotics scp -r my_niryo_robot/environment niryo@$ROS_CONTROLLER_IP:/home/niryo/niryo_ned_support
 
-sshpass -p robotics ssh niryo@$ROS_CONTROLLER_IP "echo "source /home/niryo/catkin_ws/devel/setup.bash" >> ~/.bashrc"
+#sshpass -p robotics ssh niryo@$ROS_CONTROLLER_IP "echo "source /home/niryo/catkin_ws/devel/setup.bash" >> ~/.bashrc"
 sshpass -p robotics ssh niryo@$ROS_CONTROLLER_IP "echo "source /home/niryo/niryo_ned_support/environment/environment.bash" >> ~/.bashrc"
 echo "Ready"
 
