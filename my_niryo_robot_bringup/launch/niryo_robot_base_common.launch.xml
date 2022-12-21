@@ -59,7 +59,7 @@
         <arg name="debug" value="$(arg debug)"/>
     </include>
 
-    <include file="$(find niryo_robot_arm_commander)/launch/robot_commander.launch">
+    <include file="$(find my_niryo_robot_arm_commander)/launch/robot_commander.launch">
         <arg name="log_level" value="$(arg log_level)"/>
         <arg name="gazebo" value="$(arg gazebo)"/>
         <arg name="hardware_version" value="$(arg hardware_version)"/>

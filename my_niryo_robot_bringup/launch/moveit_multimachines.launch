@@ -7,7 +7,7 @@
     <!-- Command validation params -->
     <group ns="niryo_robot">
         <group ns="robot_command_validation">
-            <rosparam file="$(find niryo_robot_arm_commander)/config/$(arg hardware_version)/robot_command_validation.yaml"/>
+            <rosparam file="$(find my_niryo_robot_arm_commander)/config/$(arg hardware_version)/robot_command_validation.yaml"/>
         </group>
     </group>
 
@@ -18,7 +18,7 @@
             <arg name="simulation_mode" value="$(arg simulation_mode)" />
         </include>
     </group>
-    
+
     <!-- Moveit move_group params -->
     <group ns="move_group">
         <!-- Disable Moveit! controller timeout -->
