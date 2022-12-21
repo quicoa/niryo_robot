@@ -16,8 +16,11 @@ sshpass -p robotics scp -r my_niryo_robot/my_niryo_robot_description niryo@$ROS_
 echo "Uploading  my_niryo_ned_moveit_config files to robot..."
 sshpass -p robotics scp -r my_niryo_robot/my_niryo_ned_moveit_config niryo@$ROS_CONTROLLER_IP:/home/niryo/niryo_robot_ws/src
 
+echo "Uploading  my_niryo_robot_bringup files to robot..."
+sshpass -p robotics scp -r my_niryo_robot/my_niryo_robot_bringup niryo@$ROS_CONTROLLER_IP:/home/niryo/niryo_robot_ws/src
 
-
+echo "Uploading  my_niryo_robot_arm_commander files to robot..."
+sshpass -p robotics scp -r my_niryo_robot/my_niryo_robot_arm_commander niryo@$ROS_CONTROLLER_IP:/home/niryo/niryo_robot_ws/src
 
 echo "Ready"
 echo

@@ -7,7 +7,7 @@
     <arg name="can_enabled" default="true"/>
     <arg name="debug" default="false"/>
    
-    <include file="$(find niryo_robot_bringup)/launch/niryo_robot.launch">
+    <include file="$(find my_niryo_robot_bringup)/launch/niryo_robot.launch">
         <arg name="hardware_version" value="one" />
         <arg name="simulation_mode" value="false"/>
         <arg name="log_level" value="$(arg log_level)" />

@@ -10,7 +10,7 @@
     </group>
 
     <!-- Including shared params & nodes -->
-    <include file="$(find niryo_robot_bringup)/launch/niryo_robot_base_common.launch.xml">
+    <include file="$(find my_niryo_robot_bringup)/launch/niryo_robot_base_common.launch.xml">
         <arg name="gazebo" value="$(arg gazebo)"/>
         <arg name="simulation_mode" value="true"/>
         <arg name="simu_gripper" value="$(arg simu_gripper)"/>

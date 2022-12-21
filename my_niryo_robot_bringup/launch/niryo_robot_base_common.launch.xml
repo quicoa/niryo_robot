@@ -43,12 +43,12 @@
     </include>
 
     <!-- Including launch files -->
-    <include file="$(find niryo_robot_hardware_interface)/launch/controllers.launch">
+    <include file="$(find my_niryo_robot_hardware_interface)/launch/controllers.launch">
         <arg name="gazebo" default="$(arg gazebo)"/>
         <arg name="debug" value="$(arg debug)"/>
     </include>
 
-    <include file="$(find niryo_robot_hardware_interface)/launch/niryo_robot_hardware_interface.launch">
+    <include file="$(find my_niryo_robot_hardware_interface)/launch/niryo_robot_hardware_interface.launch">
         <arg name="hardware_version" value="$(arg hardware_version)"/>
         <arg name="simulation_mode" value="$(arg simulation_mode)"/>
         <arg name="simu_gripper" value="$(arg simu_gripper)"/>
