@@ -27,6 +27,7 @@
             <param name="ros_version" type="string" value="$(arg ros_version)"/>
         </group>
 
+
         <group ns="python_ros_wrapper">
             <param name="service_timeout" type="int" value="2"/>
             <param name="action_connection_timeout" type="int" value="20"/>
