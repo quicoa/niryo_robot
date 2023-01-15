@@ -21,7 +21,7 @@
     <!-- Added by gerard -->
     <arg name="urdf_path" value="$(find my_niryo_robot_description)/urdf/ned/niryo_ned_robot.urdf.xacro" unless="$(eval simulation_mode)" />
 
-    <!-- rmeoved by gerard
+    <!-- removed by gerard
     <arg name="urdf_path" value="urdf/$(arg hardware_version)/niryo_$(arg hardware_version).urdf.xacro" if="$(eval simulation_mode and not gazebo)"/>
 
     <arg name="urdf_path" value="urdf/$(arg hardware_version)/niryo_$(arg hardware_version)_gripper1_n_camera.urdf.xacro" if="$(eval simulation_mode and gazebo and simu_gripper)"/>
@@ -47,7 +47,9 @@
    <!--
    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
  -->
-   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/> -->
+   <!--
+   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen"/>
+   -->
 
 
     <!-- PARAMS -->

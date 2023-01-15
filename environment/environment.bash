@@ -12,7 +12,7 @@ do
             source $HOME/niryo_ned_support/environment/hotspot_network.bash
             source $HOME/niryo_robot_ws/devel/setup.bash
             #roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch simulation_mode:=false
-            #sudo service niryo_robot_ros stop
+            sudo service niryo_robot_ros stop
             roslaunch my_niryo_robot_bringup niryo_ned_robot.launch
 	    break
             ;;
@@ -23,7 +23,7 @@ do
             source $HOME/niryo_ned_support/environment/wifi_network.bash
             source $HOME/niryo_robot_ws/devel/setup.bash
             #roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch simulation_mode:=false
-            #sudo service niryo_robot_ros stop
+            sudo service niryo_robot_ros stop
             roslaunch my_niryo_robot_bringup niryo_ned_robot.launch
             break
             ;;
@@ -34,7 +34,7 @@ do
             source $HOME/niryo_ned_support/environment/ethernet_network.bash
             source $HOME/niryo_robot_ws/devel/setup.bash
             #roslaunch my_niryo_robot_hardware_interface hardware_interface_standalone.launch simulation_mode:=false
-            #sudo service niryo_robot_ros stop
+            sudo service niryo_robot_ros stop
             roslaunch my_niryo_robot_bringup niryo_ned_robot.launch
             break
             ;;
