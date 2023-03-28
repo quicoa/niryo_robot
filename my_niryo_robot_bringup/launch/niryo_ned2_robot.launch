@@ -11,13 +11,13 @@
 
     <group if="$(arg timed)">
         <node pkg="niryo_robot_bringup" type="timed_launch.sh"
-              args="0 niryo_robot_bringup niryo_robot_sound_and_light.launch.xml
+              args="0 my_niryo_robot_bringup niryo_robot_sound_and_light.launch.xml
                   hardware_version:='ned2'
                   simulation_mode:=false"
               name="sound_and_light_launch" output="screen"/>
 
         <node pkg="niryo_robot_bringup" type="timed_launch.sh"
-              args="2 niryo_robot_bringup niryo_robot.launch
+              args="2 my_niryo_robot_bringup niryo_robot.launch
                   hardware_version:='ned2'
                   simulation_mode:=false
                   log_level:=$(arg log_level)

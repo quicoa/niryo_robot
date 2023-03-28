@@ -19,7 +19,7 @@
     -->
 
     <!-- Added by gerard -->
-    <arg name="urdf_path" value="$(find my_niryo_robot_description)/urdf/ned/niryo_ned_robot.urdf.xacro" unless="$(eval simulation_mode)" />
+    <arg name="urdf_path" value="$(find my_niryo_robot_description)/urdf/$(arg hardware_version)/niryo_$(arg hardware_version)_robot.urdf.xacro" unless="$(eval simulation_mode)" />
 
     <!-- removed by gerard
     <arg name="urdf_path" value="urdf/$(arg hardware_version)/niryo_$(arg hardware_version).urdf.xacro" if="$(eval simulation_mode and not gazebo)"/>
