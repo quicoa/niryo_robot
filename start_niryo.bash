@@ -1,4 +1,8 @@
 #!/bin/bash
-source $HOME/niryo_robot_ws/src/my_niryo_robot/support/niryo_robot_selector.bash
-source $HOME/niryo_robot_ws/devel/setup.bash
 
+# Get location of this script
+SCRIPT="${BASH_SOURCE[0]:-$0}"
+REALPATH=`realpath -- "${SCRIPT}"`
+SCRIPT_LOC=`dirname "${REALPATH}"`
+
+source "${SCRIPT_LOC}/support/niryo_robot_selector.bash"
