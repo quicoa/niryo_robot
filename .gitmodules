@@ -1,0 +1,3 @@
+[submodule "install/ned_ros"]
+	path = install/ned_ros
+	url = https://github.com/NiryoRobotics/ned_ros.git
