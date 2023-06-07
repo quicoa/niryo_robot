@@ -6,7 +6,11 @@ REALPATH=`realpath -- "${SCRIPT}"`
 SCRIPT_LOC=`dirname "${REALPATH}"`
 
 PS3='Please enter your operating mode: '
-options=("With fysical Niryo Ned Robot(Hotspot mode)" "With fysical Niryo Ned Robot(Wifi mode)" "With fysical Niryo Ned Robot(Ethernet mode)" "Without fysical Niryo Ned Robot (simulation Mode)" "None")
+options=("With fysical Niryo Ned Robot(Hotspot mode)"
+         "With fysical Niryo Ned Robot(Wifi mode)"
+         "With fysical Niryo Ned Robot(Ethernet mode)"
+         "Without fysical Niryo Ned Robot (simulation Mode)"
+         "None")
 select opt in "${options[@]}"
 do
     case $opt in
