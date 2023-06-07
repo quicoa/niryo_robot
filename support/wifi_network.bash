@@ -1,5 +1,3 @@
-#!/bin/bash
-
 IP=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
 
 export ROS_CONTROLLER_IP=192.168.2.20

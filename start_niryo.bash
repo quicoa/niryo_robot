@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Get location of this script
 SCRIPT="${BASH_SOURCE[0]:-$0}"
 REALPATH=`realpath -- "${SCRIPT}"`
