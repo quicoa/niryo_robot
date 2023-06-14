@@ -1,11 +1,6 @@
-DIR=${PWD}
-
+# Get location of this script
 SCRIPT="${BASH_SOURCE[0]:-$0}"
 REALPATH=`realpath -- "${SCRIPT}"`
 SCRIPT_LOC=`dirname "${REALPATH}"`
 
-cd "${SCRIPT_LOC}"
-
-source support/wifi_network.bash
-
-cd "${DIR}"
+source "${SCRIPT_LOC}/support/wifi_network.bash"
