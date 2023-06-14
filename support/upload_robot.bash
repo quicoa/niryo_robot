@@ -31,9 +31,9 @@ echo "Ready"
 echo
 echo "Do not forget to build workspace and source it on the robot"
 echo "Commands on the robot terminal:"
-echo "source /home/catkin_ws/install/release/ned/setup.bash<NED>"
+echo "source /home/niryo/catkin_ws/install/release/ned/setup.bash<NED>"
 echo " --- OR ---"
-echo "source /home/catkin_ws/install/release/ned2/setup.bash<NED2>"
+echo "source /home/niryo/catkin_ws/install/release/ned2/setup.bash<NED2>"
 echo "$ cd /home/niryo/niryo_robot_ws"
 echo "$ catkin_make clean" # not always nessery
 echo "$ catkin_make"

@@ -38,6 +38,9 @@
                 <mesh
                         filename="package://niryo_robot_description/meshes/gripper_1/base_gripper_1.STL"/>
             </geometry>
+            <material name="">
+                <color rgba="0.49804 0.49804 0.49804 1"/>
+            </material>
         </visual>
         <collision>
             <origin xyz="0 0 0"
@@ -120,6 +123,9 @@
                 <mesh
                         filename="package://niryo_robot_description/meshes/gripper_1/mors_2.STL"/>
             </geometry>
+            <material name="">
+                <color rgba="0.49804 0.49804 0.49804 1"/>
+            </material>
         </visual>
         <collision>
             <origin xyz="0 0 0"
