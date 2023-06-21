@@ -22,7 +22,7 @@ do
             source ${SCRIPT_LOC}/wifi_network.bash
 	    break
             ;;
-        "With fysical Niryo Ned Robot(Ethetnet mode)")
+        "With fysical Niryo Ned Robot(Ethernet mode)")
             echo "you chose With fysical Niryo Ned Robot(Ethernet mode)"
             source ${SCRIPT_LOC}/ethernet_network.bash
 	    break
