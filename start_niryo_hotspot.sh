@@ -3,4 +3,4 @@ SCRIPT="${BASH_SOURCE[0]:-$0}"
 REALPATH=`realpath -- "${SCRIPT}"`
 SCRIPT_LOC=`dirname "${REALPATH}"`
 
-source "${SCRIPT_LOC}/support/niryo_robot_selector.bash"
+source "${SCRIPT_LOC}/support/hotspot_network.bash"
